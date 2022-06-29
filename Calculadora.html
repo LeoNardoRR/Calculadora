@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="button.css">
     <title>Calculator</title>
     <style>
         *{
@@ -18,6 +19,7 @@
         }
         .calculator{
             position: absolute;
+            font-size: 10px;
             text-transform: uppercase;
             background-color: rgba(0, 0, 0, 0.8);
             top: 50%;
@@ -55,9 +57,10 @@
     </style>
 </head>
 <body>
+    <img class="logo" src= "logo.png">
     <div class="fundo">
         <div class="calculator">
-            <h1>Calculator</h1>
+            <h1>Umbrella calculator</h1>
             <p id="result"></p>
             <table>
                 <tr>
@@ -67,21 +70,21 @@
                     <td><button class="button" onclick="insert('*')">x</button></td>
                 </tr>
                 <tr>
-                    <td><button class="button" onclick="insert('7')">7</button></td>
-                    <td><button class="button" onclick="insert('8')">8</button></td>
-                    <td><button class="button" onclick="insert('9')">9</button></td>
+                    <td><button class="button" onclick="insert('7')"><img class = "sete" src="7.jpg"><a class="texto">7</a></button></td>
+                    <td><button class="button" onclick="insert('8')"><img class = "pogo" src="pogo.webp"><a class="texto">8</a></button></td>
+                    <td><button class="button" onclick="insert('9')"><img class = "image" src="image.png"><a class="texto">9</a></button></td>
                     <td><button class="button" onclick="insert('-')">-</button></td>
                 </tr>
                 <tr>
-                    <td><button class="button" onclick="insert('4')">4</button></td>
-                    <td><button class="button" onclick="insert('5')">5</button></td>
-                    <td><button class="button" onclick="insert('6')">6</button></td>
+                    <td><button class="button" onclick="insert('4')"><img class = "quatro" src="4.webp"><a class="texto">4</a></button></td>
+                    <td><button class="button" onclick="insert('5')"><img class = "cinco" src="5.webp"><a class="texto">5</a></button></td>
+                    <td><button class="button" onclick="insert('6')"><img class = "seis" src="6.jpg"><a class="texto">6</a></button></td>
                     <td><button class="button" onclick="insert('+')">+</button></td>
                 </tr>
                 <tr>
-                    <td><button class="button" onclick="insert('1')">1</button></td>
-                    <td><button class="button" onclick="insert('2')">2</button></td>
-                    <td><button class="button" onclick="insert('3')">3</button></td>
+                    <td><button class="button" onclick="insert('1')"><img class = "um" src="1.jpg"><a class="texto">1</a></button></td>
+                    <td><button class="button" onclick="insert('2')"><img class = "dois" src="2.jpg"><a class="texto">2</a></button></td>
+                    <td><button class="button" onclick="insert('3')"><img class = "tres" src="3.jpg"><a class="texto">3</a></button></td>
                     <td rowspan="2"><button class="button" style="height: 106px;" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
@@ -94,12 +97,14 @@
     <script>
         function insert(num)
         {
-            var numero = document.getElementById('result').innerHTML;
+            var numero = document.getElementById('result').innerHTML; 
+            // O getElementById retorna a referência do elemento através do seu ID
+
             document.getElementById('result').innerHTML = numero + num;
         }
         function clean()
         {
-            document.getElementById('result').innerHTML = "";
+            document.getElementById('result').innerHTML = ""; 
         }
         function back()
         {

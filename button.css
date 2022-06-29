@@ -1,0 +1,160 @@
+.logo {
+    height:100px;
+}
+.texto {
+    position: relative;
+    color:#fff;
+    width: 50px;
+    height: 50px;
+    top:-45px;
+}
+
+.texto:hover {
+    transform: scale(1.5);
+}
+
+.um {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.um:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+
+.dois:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.tres:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.quatro:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.cinco:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.seis:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.sete:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.pogo:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+.image:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: 1s;
+}
+
+.dois {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.tres {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.quatro {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.cinco {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.seis {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.sete {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.pogo {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+}
