@@ -1,31 +1,123 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <body>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Calculator</title>
-		<link rel="stylesheet" href="Cacl.css">
-            <div class="calculator"></div>
-            <div class="smart"></div>
-            <div class="buttom1"><p>C</p></div>
-            <div class="buttom2"><p>7</p></div>
-            <div class="buttom3"><p>4</p></div>
-            <div class="buttom4"><p>1</p></div>
-            <div class="buttom5"><p>0</p></div>
-            <div class="buttom6"><p><</p></div>
-            <div class="buttom7"><p>8</p></div>
-            <div class="buttom8"><p>5</p></div>
-            <div class="buttom9"><p>2</p></div>
-            <div class="buttom10"><p>/</p></div>
-            <div class="buttom11"><p>9</p></div>
-            <div class="buttom12"><p>6</p></div>
-            <div class="buttom13"><p>3</p></div>
-            <div class="buttom14"><p>.</p></div>
-            <div class="buttom15"><p>x</p></div>
-            <div class="buttom16"><p>-</p></div>
-            <div class="buttom17"><p>+</p></div>
-            <div class="buttom18"><p>=</p></div>
-        </body>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fundo{
+            background-image: linear-gradient(45deg,black, crimson);
+            height: 100vh;
+            color: #fff;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+        .calculator{
+            position: absolute;
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.8);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 15px;
+            padding: 15px;
+        }
+        .button{
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            margin: 3px;
+            background-color: rgb(31,31,31);
+            border: none;
+            color: #fff;
+            border-radius: 3px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .button:hover{
+            background-color: black;
+        }
+        #result{
+            background-color: white;
+            width: 207px;
+            height: 30px;
+            margin: 5px;
+            font-size: 25px;
+            color: black;
+            text-align: right;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+        <div class="calculator">
+            <h1>Calculator</h1>
+            <p id="result"></p>
+            <table>
+                <tr>
+                    <td><button class="button" onclick="clean()">C</button></td>
+                    <td><button class="button" onclick="back()"><</button></td>
+                    <td><button class="button" onclick="insert('/')">/</button></td>
+                    <td><button class="button" onclick="insert('*')">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('7')">7</button></td>
+                    <td><button class="button" onclick="insert('8')">8</button></td>
+                    <td><button class="button" onclick="insert('9')">9</button></td>
+                    <td><button class="button" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('4')">4</button></td>
+                    <td><button class="button" onclick="insert('5')">5</button></td>
+                    <td><button class="button" onclick="insert('6')">6</button></td>
+                    <td><button class="button" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('1')">1</button></td>
+                    <td><button class="button" onclick="insert('2')">2</button></td>
+                    <td><button class="button" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="button" style="height: 106px;" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="button" style="width: 106px;" onclick="insert('0')">0</button></td>
+                    <td><button class="button" onclick="insert('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function insert(num)
+        {
+            var numero = document.getElementById('result').innerHTML;
+            document.getElementById('result').innerHTML = numero + num;
+        }
+        function clean()
+        {
+            document.getElementById('result').innerHTML = "";
+        }
+        function back()
+        {
+            var result = document.getElementById('result').innerHTML;
+            document.getElementById('result').innerHTML = result.substring(0, result.length -1);
+        }
+        function calcular()
+        {
+            var result = document.getElementById('result').innerHTML;
+            if(result)
+            {
+                document.getElementById('result').innerHTML = eval(result);
+            }
+            else
+            {
+                document.getElementById('result').innerHTML = "Nada..."
+            }
+        }
+    </script>
+</body>
 </html>
